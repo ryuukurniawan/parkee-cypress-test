@@ -77,7 +77,7 @@ describe('Parkee Technical Test - UI Validation', () => {
             CartPage.getCartItemName().should('not.exist');
             CartPage.getCheckoutButton().click();
 
-            cy.url().should('include', '/checkout-step-one.html');
+            cy.url().should('not.include', '/checkout-step-one.html');
             cy.log('BUG LOGIK: User bisa checkout meskipun keranjang kosong');
         });
     });
